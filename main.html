@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #news {
+            width: 280px;
+            height: 460px;
+            border: 1px solid #999;
+            float: left;
+        }
+
+        #news h1 {
+            font-size: 16px;
+            font-weight: bolder;
+        }
+
+        #news table {
+            width: 260px;
+            margin: auto;
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+
+        #news th {
+            background: #39f;
+            font-size: 14px;
+            color: #fff;
+        }
+
+        #news td {
+            font-size: 12px;
+            line-height: 2;
+        }
+
+        #news tr:nth-child(even) {
+            background: #ffc;
+        }
+
+        #news tr:nth-child(odd) {
+            background: #ddd;
+        }
+
+        #news td:nth-child(2) {
+            text-align: center;
+        }
+
+        #photo {
+            width: 590px;
+            height: 460px;
+            border: 1px solid #999;
+            float: right;
+            font-size: 14px;
+            color: #ff0;
+            text-align: center;
+            background: #333;
+        }
+
+        #photo table {
+            width: 570px;
+            margin: auto;
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+
+        #photo #big {
+            width: 570px;
+            height: 340px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="news">
+        <h1>最新消息</h1>
+        <table>
+            <tr>
+                <th>主題</th>
+                <th>發布日期</th>
+            </tr>
+            <tr>
+                <td><img src="../images/0201.png">公告全國技能競賽相關事宜</td>
+                <td>112/04/06</td>
+            </tr>
+            <tr>
+                <td><img src="../images/0201.png">公告即測即評及發證相關事宜</td>
+                <td>112/04/06</td>
+            </tr>
+            <tr>
+                <td><img src="../images/0201.png">公告網頁設計修題相關事宜</td>
+                <td>112/04/06</td>
+            </tr>
+            <tr>
+                <td><img src="../images/0201.png">公告網路架設應檢相關事宜</td>
+                <td>112/04/06</td>
+            </tr>
+        </table>
+    </div>
+    <div id="photo">
+        <table>
+            <tr>
+                <td colspan="4"><img id="big" src="../images/0202A.png"></td>
+            </tr>
+            <tr>
+                <td><img class="img" src="../images/0202B.png"></td>
+                <td><img class="img" src="../images/0203B.png"></td>
+                <td><img class="img" src="../images/0204B.png"></td>
+                <td><img class="img" src="../images/0205B.png"></td>
+            </tr>
+            <tr>
+                <td>第30屆倫敦奧運</td>
+                <td>許淑淨奪舉重銀牌</td>
+                <td>第26屆深圳世大運</td>
+                <td>第27屆喀山世大運</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- 使用 jQuery 要引用 jQuery 函式庫 -->
+    <script src="../others/jquery-2.1.4.min.js"></script>
+
+    <script>
+        // js
+        // const imgs = document.querySelectorAll('.img')
+        // const big = document.querySelector('#big')
+        // imgs.forEach((img, index) => {
+        //     img.addEventListener('click', () => {
+        //         big.src = `../images/020${index + 2}A.png`
+        //     })
+        // })
+
+
+        // jQuery
+        $('.img').each(function (index, img) {
+            $(this).on('click', function () {
+                $('#big').attr('src', `../images/020${index + 2}A.png`)
+            })
+        })
+    </script>
+</body>
+
+</html>

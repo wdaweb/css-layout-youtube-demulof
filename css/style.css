@@ -34,6 +34,11 @@ a {
     margin: 0;
 }
 
+::placeholder {
+    font-size: 1rem;
+    padding-left: 15px;
+}
+
 #header .searchicon {
     width: 60px;
     height: 42px;
@@ -75,14 +80,38 @@ a {
 #bars {
     height: calc(100vh - 56px);
     width: 240px;
-    background: tomato;
     float: left;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+#bars ul {
+    padding: 0 8px;
+}
+
+#bars a {
+    width: 180px;
+    height: 40px;
+    color: #000;
+    display: block;
+    padding: 0 12px;
+    line-height: 42px;
+}
+
+#bars a:hover {
+    background-color: #f2ecec;
+}
+
+.icon_left {
+    font-size: 20px;
+    margin-right: 20px;
 }
 
 #tags {
     height: 56px;
     width: calc(100% - 240px);
     float: right;
+    overflow: hidden;
 }
 
 #tags .tagsbut {
@@ -93,6 +122,30 @@ a {
     font-family: "Microsoft JhengHei";
     padding: 6px 12px;
     margin: 17px 12px 17px 0;
+    cursor: pointer;
+}
+
+#tags .tagsbut:hover {
+    background-color: #e2dddd;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-family: "Microsoft JhengHei";
+    padding: 6px 12px;
+    margin: 17px 12px 17px 0;
+    cursor: pointer;
+}
+
+#tags .blackbut {
+    background-color: #000;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 14px;
+    font-family: "Microsoft JhengHei";
+    padding: 6px 12px;
+    margin: 17px 12px 17px 0;
+    cursor: pointer;
 }
 
 #main {
