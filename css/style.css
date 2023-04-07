@@ -151,6 +151,42 @@ a {
 #main {
     height: calc(100vh - 112px);
     width: calc(100% - 240px);
-    background: lightgoldenrodyellow;
     float: right;
+}
+
+#main #videos {
+    width: 1500px;
+    margin: auto;
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+#main #videos .video_title {
+    /* font-weight: bold; */
+    font-size: 16px;
+}
+
+#main #videos .video_info {
+    font-size: 14px;
+    color: #606060;
+}
+
+#main table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+}
+
+#main img {
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+#main tr:nth-child(2) img {
+    float: left;
+}
+
+#main span {
+    margin-left: 15px;
+    font-family: 'Roboto', sans-serif;
 }
