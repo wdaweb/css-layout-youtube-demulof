@@ -50,7 +50,7 @@ a {
     border: 1px solid #aaa;
     border-radius: 0 40px 40px 0;
     padding: 0;
-    transform: translateX(-5px);
+    /* transform: translateX(-5px); */
 }
 
 #header td:nth-child(1) {
@@ -180,12 +180,32 @@ a {
     margin-bottom: 40px;
 }
 
-#main #videos .video_title {
+#main #shorts {
+    width: 1500px;
+    margin: auto;
+    padding: 0, 10%;
+}
+
+#main #shorts_title {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.icon_shorts {
+    font-size: 30px;
+    color: red;
+}
+
+.text_shorts {
+    font-size: 20px;
+}
+
+#main .video_title {
     /* font-weight: bold; */
     font-size: 16px;
 }
 
-#main #videos .video_info {
+#main .video_info {
     font-size: 14px;
     color: #606060;
 }
@@ -205,7 +225,7 @@ a {
     float: left;
 }
 
-#main span {
+#main #videos span {
     margin-left: 15px;
 }
 
